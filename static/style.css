@@ -41,3 +41,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.navbar-img {
+  height: 2em;
+  width: 2em;
+  border-radius: 1em;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+}
