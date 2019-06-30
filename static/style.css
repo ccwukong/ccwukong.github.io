@@ -1,0 +1,52 @@
+html,
+body {
+  background: #f6f6f6;
+  font-family: 'Open Sans', 'helvetica neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+.navbar-brand {
+  background: var(--yellow);
+  padding-left: 6px;
+  padding-right: 6px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.bg-light {
+  background: #fefefe !important;
+  box-shadow: 0 3px 3px -1px #ccc;
+}
+.main-content {
+  padding-top: 4em;
+  padding-bottom: 2em;
+}
+.collection-item {
+  margin-top: 1em;
+  color: #000;
+  background: #fff;
+  border: 0;
+  box-shadow: 3px 3px 5px -1px #999;
+}
+.collection-item-content,
+.collection-item-title {
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+.collection-item-content .list-group-item {
+  font-weight: 400;
+  font-size: 0.725em;
+  color: #666;
+}
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-img {
+  height: 2em;
+  width: 2em;
+  border-radius: 1em;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+}
