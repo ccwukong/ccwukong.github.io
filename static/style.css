@@ -41,6 +41,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.playlist-item svg {
+  cursor: pointer;
+}
 .navbar-img {
   height: 2em;
   width: 2em;
@@ -53,4 +56,12 @@ body {
 .navbar-nav > li {
   padding-left: 0.825em;
   padding-right: 0.825em;
+}
+.footer {
+  text-align: center;
+  padding-bottom: 1em;
+}
+mark {
+  color: #f01f65;
+  background: #fff;
 }
