@@ -20,16 +20,14 @@ body {
   padding-bottom: 2em;
 }
 .collection-item {
-  margin-top: 1em;
+  margin-top: 2em;
   color: #000;
   background: #fff;
   border: 0;
   box-shadow: 3px 3px 5px -1px #999;
 }
-.collection-item-content,
-.collection-item-title {
+.collection-item-content {
   padding: 0.5em;
-  font-size: 1.5em;
 }
 .collection-item-content .list-group-item {
   font-weight: 400;
@@ -40,9 +38,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.playlist-item svg {
   cursor: pointer;
+}
+.playlist-item-title {
+  font-size: 1.325em;
+}
+.playlist-item-time {
+  font-size: 1.25em;
 }
 .navbar-img {
   height: 2em;
