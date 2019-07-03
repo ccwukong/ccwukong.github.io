@@ -40,6 +40,9 @@ body {
   align-items: center;
   cursor: pointer;
 }
+.playlist-item:hover {
+  background: #f6f6f6;
+}
 .playlist-item-title {
   font-size: 1.325em;
 }
