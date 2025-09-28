@@ -114,6 +114,16 @@
         justify-content: space-between;
         padding: 10px 20px;
       }
+      /* mobile nav toggle */
+      .mobile-toggle {
+        display: none;
+        background: transparent;
+        border: 0;
+        color: white;
+        font-size: 1.5rem;
+        padding: 8px;
+        cursor: pointer;
+      }
 
       .nav-links {
         list-style: none;
@@ -203,14 +213,11 @@
       }
       .compare-table tr:nth-child(even) td { background: #ffffff; }
       @media (max-width: 720px) {
-        .compare-table thead { display: none; }
-        .compare-table, .compare-table tbody, .compare-table tr, .compare-table td { display: block; width: 100%; }
-        .compare-table tr { margin-bottom: 12px; border-bottom: 1px solid #eef2f7; }
-        .compare-table td { padding-left: 50%; position: relative; }
-        .compare-table td::before { position: absolute; left: 16px; top: 12px; width: 40%; white-space: nowrap; font-weight: 700; }
-        .compare-table td:nth-of-type(1)::before { content: "Feature"; }
-        .compare-table td:nth-of-type(2)::before { content: "KopiBot Kit"; }
-        .compare-table td:nth-of-type(3)::before { content: "Typical SaaS"; }
+        /* Keep table structure on mobile, allow horizontal scroll inside wrapper */
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .compare-table { min-width: 800px; }
+        .compare-table thead th { padding: 12px 14px; }
+        .compare-table td { padding: 12px 14px; }
       }
 
       .hero h1 {
@@ -581,6 +588,25 @@
       /* Responsive */
       @media (max-width: 768px) {
         .nav-links { gap: 10px; font-size: 0.95rem; }
+        /* show mobile toggle */
+        .mobile-toggle { display: block; }
+        /* hide desktop nav until opened */
+        .nav-links {
+          display: none;
+        }
+        body.nav-open .nav-links {
+          display: flex;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          right: 0;
+          background: linear-gradient(180deg, rgba(102,126,234,0.95), rgba(118,75,162,0.95));
+          flex-direction: column;
+          gap: 0;
+          padding: 12px 20px 24px;
+          z-index: 60;
+        }
+        body.nav-open .nav-links a { display:block; padding: 12px 10px; border-radius:6px; }
         .nav-container { padding: 8px 12px; }
         .hero h1 {
           font-size: 2.5rem;
@@ -614,6 +640,18 @@
         .site-logo {
           height: 64px;
         }
+
+        /* CTA full width on mobile */
+        .cta-button { width: 100%; display:block; padding: 16px; text-align:center; }
+        .pricing-grid { grid-template-columns: 1fr; }
+        .features { grid-template-columns: 1fr; gap: 28px; }
+      }
+
+      /* Extra small screens tweaks */
+      @media (max-width: 420px) {
+        .hero h1 { font-size: 1.8rem; }
+        .hero .subtitle { font-size: 1rem; }
+        .value-prop { font-size: 1rem; padding: 14px; }
       }
     </style>
   </head>
@@ -625,6 +663,7 @@
           <a href="/" class="nav-logo" aria-label="KopiBot Kit home">
             <img src="assets/logo.png" alt="KopiBot Kit logo" class="site-logo" />
           </a>
+          <button class="mobile-toggle" aria-label="Open navigation">☰</button>
           <ul class="nav-links">
             <li><a href="#why">Why KopiBot Kit?</a></li>
             <li><a href="#how">How It Works</a></li>            
@@ -874,7 +913,7 @@
         </div>
         <div class="deploy-options">
           <div class="deploy-card">
-            <h4>Vercel (recommended)</h4>
+            <h4 style="color: black">Vercel (recommended)</h4>
             <p>Fastest path to production. Zero DevOps for most stores.</p>
             <ul>
               <li>Fork or upload the repo to GitHub</li>
@@ -884,12 +923,11 @@
             </ul>
           </div>
           <div class="deploy-card">
-            <h4>AWS Serverless (Lambda + API Gateway)</h4>
+            <h4 style="color: black">AWS Serverless (Lambda + API Gateway)</h4>
             <p>For teams that need infra control and regional routing.</p>
             <ul>
               <li>Package the Express server as a Lambda (serverless framework / AWS SAM)</li>
               <li>Deploy API to API Gateway and configure a static frontend (S3 + CloudFront)</li>
-              <li>Set Secrets in AWS Secrets Manager for production keys</li>
               <li>Optional: use RDS or managed Postgres compatible DB for production Supabase replacement</li>
             </ul>
           </div>
@@ -1067,7 +1105,28 @@
 
             // Smooth scroll to the target (CSS smooth behavior handles animation)
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // close mobile nav after click
+            document.body.classList.remove('nav-open');
           });
+        });
+      })();
+
+      // Mobile nav toggle
+      (function() {
+        const toggle = document.querySelector('.mobile-toggle');
+        if (!toggle) return;
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.body.classList.toggle('nav-open');
+        });
+
+        // close mobile nav when clicking outside
+        document.addEventListener('click', function(e) {
+          const nav = document.querySelector('.nav-container');
+          if (!nav) return;
+          if (!nav.contains(e.target) && document.body.classList.contains('nav-open')) {
+            document.body.classList.remove('nav-open');
+          }
         });
       })();
     </script>
