@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      KopiBot Kit - AI Support Agent for D2C Brands | Save thousands of dollars or more every month
+    </title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Stop losing sales to language barriers. KopiBot Kit is an AI support agent that speaks English & Chinese today, with Malay & Tamil coming soon for SEA. One-time purchase, saves thousands of dollars every month. Get early access for 50% off."
+    />
+    <meta
+      name="keywords"
+      content="AI customer support, multilingual chatbot, D2C ecommerce, customer service automation, React chatbot, Chinese English support, Malay, Tamil, SEA"
+    />
+    <meta name="author" content="KopiBot Kit" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kopibotkit.com/" />
+    <meta
+      property="og:title"
+      content="KopiBot Kit - AI Support Agent for D2C Brands"
+    />
+    <meta
+      property="og:description"
+      content="Stop losing sales to language barriers. AI support that speaks English & Chinese today — Malay & Tamil support coming soon across SEA. Save thousands of dollars or more every month with one-time purchase."
+    />
+    <meta property="og:image" content="https://kopibotkit.com/assets/og-image.png" />
+
+    <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://kopibotkit.com/" />
+  <meta property="twitter:title" content="KopiBot Kit - AI Support Agent for D2C Brands | Save thousands of dollars or more every month" />
+    <meta
+      property="twitter:description"
+      content="Stop losing sales to language barriers. AI support that speaks English & Chinese today — Malay & Tamil support coming soon across SEA. Save thousands of dollars or more every month with one-time purchase."
+    />
+    <meta
+      property="twitter:image"
+      content="https://kopibotkit.com/assets/og-image.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3HYJHTGML"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-D3HYJHTGML');
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        line-height: 1.6;
+        color: #1f2937;
+        background-color: #ffffff;
+        scroll-behavior: smooth; /* enable smooth scrolling for anchor links */
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Footer styles */
+      .site-footer {
+        background: #111827;
+        color: #d1d5db;
+        padding: 28px 0;
+        text-align: center;
+      }
+      .site-footer a { color: #f59e0b; text-decoration: none; font-weight:600; }
+      .site-footer .footer-links { display:flex; gap:12px; justify-content:center; margin-bottom:8px; flex-wrap:wrap; }
+      .breadcrumb { display:inline-block; background:#f3f4f6; color:#111827; padding:10px 14px; border-radius:8px; text-decoration:none; }
+
+      /* Top navigation styles */
+      .top-nav {
+        position: static; /* non-sticky, sits in normal document flow */
+        background: transparent;
+        border-bottom: none;
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 8px 10px;
+        border-radius: 6px;
+      }
+
+      /* Make the logo in the navbar smaller so it fits neatly */
+      .nav-logo .site-logo {
+        height: 96px;
+      }
+
+      /* Improve legibility of white links over the hero gradient */
+      .nav-links a { text-shadow: 0 1px 2px rgba(0,0,0,0.45); }
+
+      /* hero uses default spacing when nav is non-sticky */
+      body > .hero { padding-top: 0; }
+
+      /* ensure anchored sections sit below the nav visually */
+      #deploy, #how, #features, #developers, #pricing, #why, #signup {
+        scroll-margin-top: 80px;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-sm {
+        padding: 60px 0;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+        position: relative;
+      }
+
+      /* Logo positioned top-left */
+      .hero .site-header {
+        position: absolute;
+        left: 10%;
+        top: 0px;
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .site-logo {
+        height: 120px;
+        width: auto;
+        display: block;
+      }
+
+      /* Pricing comparison table styles */
+      .table-wrap { overflow-x: auto; }
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 8px;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .compare-table thead th {
+        background: #f3f4f6;
+        text-align: left;
+        padding: 12px 16px;
+        font-weight: 700;
+      }
+      .compare-table td {
+        padding: 12px 16px;
+        border-top: 1px solid #eef2f7;
+        vertical-align: top;
+      }
+      .compare-table tr:nth-child(even) td { background: #ffffff; }
+      @media (max-width: 720px) {
+        .compare-table thead { display: none; }
+        .compare-table, .compare-table tbody, .compare-table tr, .compare-table td { display: block; width: 100%; }
+        .compare-table tr { margin-bottom: 12px; border-bottom: 1px solid #eef2f7; }
+        .compare-table td { padding-left: 50%; position: relative; }
+        .compare-table td::before { position: absolute; left: 16px; top: 12px; width: 40%; white-space: nowrap; font-weight: 700; }
+        .compare-table td:nth-of-type(1)::before { content: "Feature"; }
+        .compare-table td:nth-of-type(2)::before { content: "KopiBot Kit"; }
+        .compare-table td:nth-of-type(3)::before { content: "Typical SaaS"; }
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 24px;
+        line-height: 1.2;
+      }
+
+      .hero .subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 40px;
+        opacity: 0.95;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero .value-prop {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #f59e0b;
+        color: white;
+        padding: 18px 36px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Savings banner */
+      .savings-banner {
+        display: inline-block;
+        background: rgba(255,255,255,0.12);
+        color: #fff;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 700;
+        margin-top: 18px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      }
+
+      /* subtle pulse to draw attention */
+      @keyframes pulseHighlight {
+        0% { box-shadow: 0 6px 18px rgba(0,0,0,0.08); transform: translateY(0); }
+        50% { box-shadow: 0 12px 28px rgba(0,0,0,0.12); transform: translateY(-2px); }
+        100% { box-shadow: 0 6px 18px rgba(0,0,0,0.08); transform: translateY(0); }
+      }
+      .savings-banner { animation: pulseHighlight 2.2s ease-in-out infinite; }
+
+      .savings-highlight { font-size:1.15rem; font-weight:800; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,0.35); }
+
+      .why-callout {
+        background: linear-gradient(90deg, #ecfdf5 0%, #ffffff 100%);
+        border: 1px solid #d1fae5;
+        padding: 18px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        font-weight: 600;
+        color: #065f46;
+      }
+
+      .why-callout strong { color: #065f46; font-size:1.05rem; }
+
+      .cta-button:hover {
+        background: #d97706;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+      }
+
+      /* How It Works */
+      .how-it-works {
+        background: #f9fafb;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 60px;
+      }
+
+      .step {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        text-align: center;
+      }
+
+      .step-number {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: #667eea;
+        color: white;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 60px;
+        margin-bottom: 20px;
+      }
+
+      .step h3 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+        color: #1f2937;
+      }
+
+      .step p {
+        color: #6b7280;
+        font-size: 1.1rem;
+      }
+
+      /* Features */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 50px;
+        margin-top: 60px;
+      }
+
+      .feature {
+        padding: 40px;
+        border-radius: 12px;
+        border: 2px solid #e5e7eb;
+        transition: all 0.3s ease;
+      }
+
+      .feature:hover {
+        border-color: #667eea;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature h3 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+        color: #1f2937;
+      }
+
+      .feature p {
+        color: #6b7280;
+        font-size: 1.1rem;
+      }
+
+      /* Developer Section */
+      .developer-section {
+        background: #1f2937;
+        color: white;
+      }
+
+      .developer-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .dev-feature {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .dev-feature::before {
+        content: "✓";
+        background: #10b981;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+
+      /* Pricing */
+      .pricing {
+        background: #f9fafb;
+        text-align: center;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      /* Deploy options styling */
+      .deploy-options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-top: 32px;
+      }
+
+      .deploy-card {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px solid #e6edf3;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+      }
+
+      .deploy-card h4 { margin-bottom: 10px; }
+      .deploy-card p { color: #4b5563; font-size: 0.98rem; margin-bottom:10px; }
+      .deploy-card ul { margin:0; padding-left: 18px; color:#374151; }
+
+      .included-list {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 18px;
+        text-align: left;
+      }
+
+      .included-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        color: #374151;
+        margin-bottom: 10px;
+        font-size: 0.98rem;
+      }
+
+      .included-list li::before {
+        content: "\2713";
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #10b981;
+        color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        font-size: 12px;
+        margin-top: 2px;
+      }
+
+      .pricing-card {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 320px;
+      }
+
+      /* slide-in animation for anchored sections */
+      @keyframes slideInFromRight {
+        from { transform: translateX(30px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+
+      .slide-in-anim {
+        animation: slideInFromRight 420ms cubic-bezier(.2,.8,.2,1) both;
+      }
+
+      /* Ensure the included-list stretches so both pricing cards match heights */
+      .pricing-card .included-list {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: flex-start;
+      }
+
+      /* Keep CTA button container pinned to bottom */
+      .pricing-card > div[style] {
+        margin-top: 18px;
+        margin-top: auto;
+      }
+
+      .price {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 8px;
+      }
+
+      .price-original {
+        font-size: 1.5rem;
+        color: #9ca3af;
+        text-decoration: line-through;
+        margin-bottom: 20px;
+      }
+
+      .price-note {
+        color: #6b7280;
+        margin-bottom: 30px;
+      }
+
+      /* Final CTA */
+      .final-cta {
+        background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        color: white;
+        text-align: center;
+      }
+
+      .email-form {
+        max-width: 500px;
+        margin: 40px auto 0;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .email-input {
+        flex: 1;
+        min-width: 250px;
+        padding: 16px 20px;
+        font-size: 1.1rem;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        outline: none;
+      }
+
+      .email-input:focus {
+        border-color: #667eea;
+      }
+
+      .social-proof {
+        margin-top: 30px;
+        font-style: italic;
+        opacity: 0.8;
+      }
+
+      /* Section Headers */
+      .section-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 16px;
+      }
+
+      .section-header p {
+        font-size: 1.2rem;
+        color: #6b7280;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links { gap: 10px; font-size: 0.95rem; }
+        .nav-container { padding: 8px 12px; }
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero .subtitle {
+          font-size: 1.1rem;
+        }
+
+        .hero .value-prop {
+          font-size: 1.2rem;
+          padding: 20px;
+        }
+
+        .section {
+          padding: 60px 0;
+        }
+
+        .section-sm {
+          padding: 40px 0;
+        }
+
+        .email-form {
+          flex-direction: column;
+        }
+
+        .email-input {
+          min-width: 100%;
+        }
+        /* Smaller logo on mobile */
+        .site-logo {
+          height: 64px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <nav class="top-nav">
+        <div class="container nav-container">
+          <a href="/" class="nav-logo" aria-label="KopiBot Kit home">
+            <img src="assets/logo.png" alt="KopiBot Kit logo" class="site-logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="#why">Why KopiBot Kit?</a></li>
+            <li><a href="#how">How It Works</a></li>            
+            <li><a href="#features">Features</a></li>
+            <li><a href="#developers">Developers</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <!-- logo moved to top navigation -->
+        <h1>Your Support Team Can't Keep Up.<br />Your Sales Are Suffering.</h1>
+        <div class="savings-banner">Save thousands of dollars or more — one-time purchase, big ongoing savings</div>
+        <p class="subtitle">
+          Every missed message in Chinese is money walking out the door. Every
+          slow response is a customer choosing your competitor. You're either
+          bleeding revenue or burning thousands of dollars every month on a bilingual agent you
+          can't afford.
+        </p>
+        <div class="value-prop">
+          <strong>KopiBot Kit is your way out.</strong><br />
+          An AI Support Agent that speaks English and Simplified Chinese today —
+          Malay and Tamil coming soon for SEA markets. One-time purchase, S$149.
+          Saves you thousands of dollars every month. Your customers get instant answers.
+          You get your life back.
+        </div>
+  
+  <a href="mailto:nick.chen@kopibotkit.com?subject=Early%20access%20request%20-%20KopiBot%20Kit&body=Hi%20Nick%2C%0A%0AI%27d%20like%20early%20access%20to%20KopiBot%20Kit.%20Please%20add%20me%20to%20the%20early%20access%20list.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Get Early Access & Lock In 50% Off</a>
+      </div>
+    </section>
+    
+
+    <!-- Why KopiBot Kit -->
+    <section id="why" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why KopiBot Kit</h2>
+          <p>Compare KopiBot Kit to typical SaaS helpdesks to see the cost advantage.</p>
+        </div>
+        <!-- Pricing comparison table (moved from Pricing) -->
+        <div class="pricing-comparison" style="margin-top:8px;">
+          <div class="why-callout" style="margin-bottom:14px;">
+            <strong>Save thousands of dollars or more</strong> every year vs a typical SaaS helpdesk — one-time purchase plus low infra costs means real, ongoing savings for founders.
+          </div>
+          <h3 style="margin-bottom:12px;">Pricing Comparison</h3>
+          <div class="table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>KopiBot Kit</th>
+                  <th>Typical SaaS Helpdesk - 3 seats</th>
+                  <th>Typical SaaS Helpdesk - 10 seats</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Price Model</td>
+                  <td>✅ One-Time Purchase, <b>Free</b> Lifetime Updates</td>
+                  <td>❌ Monthly Subscription</td>
+                  <td>❌ Monthly Subscription</td>
+                </tr>
+                <tr>
+                  <td>Upfront Cost</td>
+                  <td>S$149 (Limited Early Access Price)</td>
+                  <td>S$0 (Free Trial)</td>
+                  <td>S$0 (Free Trial)</td>
+                </tr>
+                <tr>
+                  <td>Base Monthly Subscription</td>
+                  <td>S$0</td>
+                  <td>~S$600 (Support Package + AI Add-on)</td>
+                  <td>~S$600 (Support Package + AI Add-on)</td>
+                </tr>
+                <tr>
+                  <td>Est. Monthly Infra Cost*</td>
+                  <td>~S$50−S$90 (Vercel + Supabase + OpenAI)</td>
+                  <td>Included</td>
+                  <td>Included</td>
+                </tr>
+                <tr>
+                  <td>Human Customer Service Agent "Seats"</td>
+                  <td>✅ Unlimited</td>
+                  <td>3 Seats (~S$100/month per agent) = <b>S$300/month</b></td>
+                  <td>10 Seats (~S$100/month per agent) = <b>S$1,000/month</b></td>
+                </tr>
+                <tr>
+                  <td>---</td>
+                  <td>---</td>
+                  <td>---</td>
+                </tr>
+                <tr>
+                  <td>Total Monthly Cost</td>
+                  <td>~S$50−S$90</td>
+                  <td>~S$900</td>
+                  <td>~S$1,600</td>
+                </tr>
+                <tr>
+                  <td>Your Total Cost (<b>Year 1</b>)</td>
+                  <td>~S$749−S$1,249</td>
+                  <td>~S$10,800</td>
+                  <td>~S$19,200</td>
+                </tr>
+                <tr>
+                  <td>Your Total Cost (<b>Year 2 onwards</b>)</td>
+                  <td>~S$600−S$1,080</td>
+                  <td>Another ~S$10,800</td>
+                  <td>Another ~S$19,200</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:0.95rem; color:#6b7280; margin-top:8px;">*Estimated infra costs depend on usage. Values are illustrative.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" class="how-it-works section">
+      <div class="container">
+        <div class="section-header">
+          <h2>How It Works</h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Feed It Your Knowledge</h3>
+            <p>
+              Upload your FAQs, return policies, product specs—everything your
+              customers ask about. KopiBot learns your business in minutes, not
+              months.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>Your Developer Deploys in One Afternoon</h3>
+            <p>
+              Clean React codebase. Express.js backend. Supabase database.
+              Deploys to Vercel with a few clicks. Your dev will thank you for
+              choosing something that actually works.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Watch Support Tickets Disappear</h3>
+            <p>
+              KopiBot answers customers instantly, 24/7, in perfect English or
+              Simplified Chinese today — with Malay and Tamil rolling out soon
+              across SEA. No more 3am support emergencies. No more lost sales
+              from slow responses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features as Benefits -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Features That Actually Matter</h2>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <h3>Finally Speak Your Customers' Language</h3>
+            <p>
+              Stop losing Chinese customers to awkward Google Translate
+              responses. KopiBot delivers natural, culturally-aware support that
+              builds trust and closes sales. Malay and Tamil support are on the
+              roadmap to help you expand across SEA.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Powered by Your Own Knowledge, Not Generic AI</h3>
+            <p>
+              Built with RAG (Retrieval-Augmented Generation) technology.
+              KopiBot only answers with your approved information. Every
+              response is accurate, on-brand, and reflects your actual policies.
+              No embarrassing AI hallucinations.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Never Miss a Critical Conversation</h3>
+            <p>
+              Smart escalation to humans for complex issues, refunds, or angry
+              customers. You stay in control of what matters while KopiBot
+              handles the routine stuff. Best of both worlds.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Unlimited human Customer Service Agent Accounts</h3>
+            <p>
+              Create unlimited human Customer Service Agent accounts and assign them to your
+              team. Accounts integrate with your escalation flow so agents can
+              pick up conversations, add notes, and resolve issues without
+              waiting for handoffs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section id="developers" class="developer-section section">
+      <div class="container">
+        <div class="section-header">
+          <h2 style="color: white">Finally, a Developer-Friendly Solution</h2>
+        </div>
+        <div class="developer-features">
+          <div class="dev-feature">
+            <span
+              ><strong>Modern Stack:</strong> React, Express.js, Supabase,
+              Tailwind CSS, Shadcn/ui</span
+            >
+          </div>
+          <div class="dev-feature">
+            <span
+              ><strong>Full Code Ownership:</strong> No black boxes, no vendor
+              lock-in, modify anything</span
+            >
+          </div>
+          <div class="dev-feature">
+            <span
+              ><strong>Deploys in Minutes:</strong> One-click Vercel deployment,
+              zero DevOps headaches</span
+            >
+          </div>
+          <div class="dev-feature">
+            <span
+              ><strong>Clean, Well-Documented Code:</strong> Your future self
+              will thank you</span
+            >
+          </div>
+          <div class="dev-feature">
+            <span
+              ><strong>No Ongoing Dependencies:</strong> Install once, own
+              forever</span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Deploy Options -->
+
+      <div class="container" style="margin-top:60px;">
+        <div class="section-header">
+          <p>Deploy quickly to Vercel, or use AWS serverless for more control. Both options are supported and documented.</p>
+        </div>
+        <div class="deploy-options">
+          <div class="deploy-card">
+            <h4>Vercel (recommended)</h4>
+            <p>Fastest path to production. Zero DevOps for most stores.</p>
+            <ul>
+              <li>Fork or upload the repo to GitHub</li>
+              <li>Connect the repo to Vercel and import the project</li>
+              <li>Set environment variables (Supabase URL, keys, OpenAI key)</li>
+              <li>Deploy — Vercel will build and publish automatically</li>
+            </ul>
+          </div>
+          <div class="deploy-card">
+            <h4>AWS Serverless (Lambda + API Gateway)</h4>
+            <p>For teams that need infra control and regional routing.</p>
+            <ul>
+              <li>Package the Express server as a Lambda (serverless framework / AWS SAM)</li>
+              <li>Deploy API to API Gateway and configure a static frontend (S3 + CloudFront)</li>
+              <li>Set Secrets in AWS Secrets Manager for production keys</li>
+              <li>Optional: use RDS or managed Postgres compatible DB for production Supabase replacement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Simple, Fair Pricing</h2>
+          <p>No monthly fees. No per-message charges. No surprise bills.</p>
+        </div>
+        <div class="pricing-grid" style="margin-top:24px;">
+          <div class="pricing-card">
+            <h3 style="margin-bottom:12px;">Standard</h3>
+            <div class="price-original">Regular Price: S$299</div>
+            <div class="price">S$149</div>
+            <div class="price-note">Early Access Price (50% off, limited time)</div>
+            <p>Buy once. Own forever. Modify as needed. <br /><br /><strong>Includes lifetime updates</strong></p>
+            <ul class="included-list">
+              <li>Lifetime updates to the product license</li>
+              <li>Downloadable codebase (.zip) — React + Express monorepo</li>
+              <li>English & Simplified Chinese support templates</li>
+              <li>RAG setup (knowledge ingestion for accurate answers)</li>
+              <li>Supabase backend config & example data</li>
+              <li>UI components with Tailwind + Shadcn/ui</li>
+              <li>Deployment guide and Production-ready configs (Vercel + AWS serverless docs included)</li>
+              <li>Create unlimited human Customer Service Agent accounts</li>
+              <li>Basic documentation and developer notes</li>
+            </ul>
+            <div style="margin-top:auto; margin-top:18px;"><a href="mailto:nick.chen@kopibotkit.com?subject=Early%20access%20request%20-%20KopiBot%20Kit&body=Hi%20Nick%2C%0A%0AI%27d%20like%20early%20access%20to%20KopiBot%20Kit.%20Please%20add%20me%20to%20the%20early%20access%20list.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Get Early Access & Lock In 50% Off</a></div>
+          </div>
+
+          <div class="pricing-card">
+            <h3 style="margin-bottom:12px;">All-in Bundle</h3>
+            <div class="price-original">Regular Price: S$799</div>
+            <div class="price">S$649</div>
+            <div class="price-note">Early Access Bundle (limited time)</div>
+            <p>Full KopiBot Kit + white-glove setup. We install, configure, and customise KopiBot Kit for your store. No developer needed — you get a fully working setup and launch support. <br /><br /><strong>The white-glove setup is a one-time service; lifetime updates apply to the items included in the Standard plan only</strong></p>
+            <ul class="included-list">
+              <li>Everything in the Standard plan</li>
+              <li>We handle deployment for you (Vercel or AWS) as part of the setup</li>
+              <li>Full on-site (remote) setup and configuration</li>
+              <li>Custom knowledge ingestion (we ingest your FAQs, policies)</li>
+              <li>Language tuning for Malay/Tamil (where available)</li>
+              <li>Testing across store flows & sample conversations</li>
+              <li>1 week post-launch support</li>
+            </ul>
+            <div style="margin-top:auto; margin-top:18px;"><a href="mailto:nick.chen@kopibotkit.com?subject=White-glove%20bundle%20request%20-%20KopiBot%20Kit&body=Hi%20Nick%2C%0A%0AI%27m%20interested%20in%20the%20white-glove%20bundle%20(S%24649%20early).%20Please%20contact%20me%20to%20arrange%20setup.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Request White-Glove Bundle</a></div>
+          </div>
+        </div>
+    </section>    
+
+    <!-- Final CTA -->
+    <section class="final-cta section" id="signup">
+      <div class="container">
+        <h2 style="font-size: 2.5rem; margin-bottom: 24px">
+          Stop Drowning in Support Tickets
+        </h2>
+        <p
+          style="
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          You started your business to build something amazing, not to answer
+          "What's your return policy?" in two languages at 2am. KopiBot Kit
+          gives you back your nights, your weekends, and your sanity. Your
+          customers get instant, accurate answers. You get to focus on growing
+          your business instead of drowning in support chaos.
+        </p>
+        <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 40px">
+          Ready to take back control?
+        </p>
+
+        <p style="margin-top:8px;">
+          <a href="mailto:nick.chen@kopibotkit.com?subject=Early%20access%20request%20-%20KopiBot%20Kit&body=Hi%20Nick%2C%0A%0AI%27d%20like%20early%20access%20to%20KopiBot%20Kit.%20Please%20add%20me%20to%20the%20early%20access%20list.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Get Early Access & Lock In 50% Off</a>
+        </p>
+
+        <p class="social-proof">
+          Join other founders who've already signed up for early access
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="/terms.html">Terms &amp; Conditions</a>
+          <a href="/privacy.html">Privacy Policy</a>
+        </div>
+        <div style="font-size:0.95rem; opacity:0.9;">© 2025 KopiBot Kit — All rights reserved.</div>
+      </div>
+    </footer>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "KopiBot Kit",
+        "description": "AI Support Agent for D2C brands that speaks English and Simplified Chinese today, with Malay & Tamil coming soon for SEA. One-time purchase codebase.",
+        "brand": {
+          "@type": "Brand",
+          "name": "KopiBot Kit"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Standard - Early Access",
+            "price": "149",
+            "priceCurrency": "SGD",
+            "availability": "https://schema.org/PreOrder",
+            "validFrom": "2025-09-28"
+          },
+          {
+            "@type": "Offer",
+            "name": "White-Glove Bundle - Early Access",
+            "price": "649",
+            "priceCurrency": "SGD",
+            "availability": "https://schema.org/PreOrder",
+            "validFrom": "2025-09-28"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "200"
+        }
+      }
+    </script>
+
+    <!-- Analytics placeholder -->
+    <script>
+      // Add your analytics code here (Google Analytics, etc.)
+      console.log("KopiBot Kit landing page loaded");
+
+      // No form handler required — CTAs open user's mail client directly via mailto links.
+    </script>
+    <script>
+      // Smooth scroll + reliable slide-in animation using IntersectionObserver
+      (function() {
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+        // Observer to trigger animation when section is visible
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.25 };
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              el.classList.remove('slide-in-anim');
+              void el.offsetWidth; // reflow
+              el.classList.add('slide-in-anim');
+              // stop observing this element until next time (we'll re-observe on nav click)
+              obs.unobserve(el);
+            }
+          });
+        }, observerOptions);
+
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').slice(1);
+            const target = document.getElementById(targetId);
+            if (!target) return;
+
+            // Re-observe the target so the animation will trigger when it comes into view
+            observer.observe(target);
+
+            // Smooth scroll to the target (CSS smooth behavior handles animation)
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
