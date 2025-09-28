@@ -487,6 +487,8 @@
         min-height: 320px;
       }
 
+      /* Previously had a green highlight for Pro; removed to keep all cards visually consistent */
+
       /* slide-in animation for anchored sections */
       @keyframes slideInFromRight {
         from { transform: translateX(30px); opacity: 0; }
@@ -505,6 +507,21 @@
         justify-content: flex-start;
       }
 
+      /* Uniform CTA buttons inside pricing cards */
+      .pricing-card .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* full width of the card for consistent look */
+        padding: 14px 18px;
+        font-size: 1.05rem;
+        font-weight: 600;
+        height: 50px; /* fixed height so all buttons match */
+        min-height: 50px;
+        box-sizing: border-box;
+        border-radius: 8px;
+      }
+
       /* Keep CTA button container pinned to bottom */
       .pricing-card > div[style] {
         margin-top: 18px;
@@ -512,17 +529,30 @@
       }
 
       .price {
-        font-size: 3rem;
+        display: inline-block;
+        font-size: 2.25rem; /* slightly reduced to fit inline with original price */
         font-weight: 700;
         color: #1f2937;
-        margin-bottom: 8px;
+        vertical-align: middle;
+        margin-bottom: 0;
       }
 
       .price-original {
-        font-size: 1.5rem;
+        display: inline-block;
+        font-size: 1rem;
         color: #9ca3af;
         text-decoration: line-through;
-        margin-bottom: 20px;
+        margin-right: 12px;
+        vertical-align: middle;
+        margin-bottom: 0;
+      }
+
+      .price-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 8px;
       }
 
       .price-note {
@@ -652,6 +682,8 @@
         .hero h1 { font-size: 1.8rem; }
         .hero .subtitle { font-size: 1rem; }
         .value-prop { font-size: 1rem; padding: 14px; }
+        /* Stack price elements on very small screens for readability */
+        .price-row { flex-direction: column; gap: 4px; }
       }
     </style>
   </head>
@@ -690,8 +722,8 @@
           Saves you thousands of dollars every month. Your customers get instant answers.
           You get your life back.
         </div>
-  
-  <a href="mailto:nick.chen@kopibotkit.com?subject=Early%20access%20request%20-%20KopiBot%20Kit&body=Hi%20Nick%2C%0A%0AI%27d%20like%20early%20access%20to%20KopiBot%20Kit.%20Please%20add%20me%20to%20the%20early%20access%20list.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Get Early Access & Lock In 50% Off</a>
+
+  <a href="#pricing" class="cta-button hero-cta">Be an Early Adopter & Lock In 50% Off</a>
       </div>
     </section>
     
@@ -714,7 +746,7 @@
               <thead>
                 <tr>
                   <th>Feature</th>
-                  <th>KopiBot Kit</th>
+                  <th>KopiBot Kit - Starter</th>
                   <th>Typical SaaS Helpdesk - 3 seats</th>
                   <th>Typical SaaS Helpdesk - 10 seats</th>
                 </tr>
@@ -728,7 +760,7 @@
                 </tr>
                 <tr>
                   <td>Upfront Cost</td>
-                  <td>S$149 (Limited Early Access Price)</td>
+                  <td>S$149 (Limited Early Adopter Price)</td>
                   <td>S$0 (Free Trial)</td>
                   <td>S$0 (Free Trial)</td>
                 </tr>
@@ -932,14 +964,17 @@
         <div class="section-header">
           <h2>Simple, Fair Pricing</h2>
           <p>No monthly fees. No per-message charges. No surprise bills.</p>
+          <p>Note: KopiBot Kit is currently in the pre-order phase. By purchasing now, you are securing your spot in the "Founder's Circle" and getting a 50% discount. <b>Estimated delivery of the MVP is in 2-3 months.</b></p>
         </div>
         <div class="pricing-grid" style="margin-top:24px;">
           <div class="pricing-card">
-            <h3 style="margin-bottom:12px;">Standard</h3>
-            <div class="price-original">Regular Price: S$299</div>
-            <div class="price">S$149</div>
-            <div class="price-note">Early Access Price (50% off, limited time)</div>
-            <p>Buy once. Own forever. Modify as needed. <br /><br /><strong>Includes lifetime updates</strong></p>
+            <h3 style="margin-bottom:12px;">Starter</h3>
+            <div class="price-row">
+              <div class="price-original">S$299</div>
+              <div class="price">S$149</div>
+            </div>
+            <div class="price-note">Early Adopter — 50% off (limited time) <br /> One-time purchase — includes lifetime updates</div>
+            <p style="text-align: left;">For use in <b>a single commercial project</b>. Includes lifetime updates and access to the private community.</p>
             <ul class="included-list">
               <li>Lifetime updates to the product license</li>
               <li>Downloadable codebase (.zip) — React + Express monorepo</li>
@@ -951,25 +986,38 @@
               <li>Create unlimited human Customer Service Agent accounts</li>
               <li>Basic documentation and developer notes</li>
             </ul>
-            <div style="margin-top:auto; margin-top:18px;"><a href="mailto:nick.chen@kopibotkit.com?subject=Early%20access%20request%20-%20KopiBot%20Kit&body=Hi%20Nick%2C%0A%0AI%27d%20like%20early%20access%20to%20KopiBot%20Kit.%20Please%20add%20me%20to%20the%20early%20access%20list.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Get Early Access & Lock In 50% Off</a></div>
+            <div style="margin-top:auto; margin-top:18px;"><a href="mailto:nick.chen@kopibotkit.com?subject=Purchase%20Starter%20License%20-%20KopiBot%20Kit%20(50%25%20off)&body=Hi%20Nick%2C%0A%0AI%27d%20like%20to%20purchase%20the%20Starter%20License%20with%20the%2050%25%20early%20access%20discount%20(S%24149).%20Please%20send%20me%20the%20download%20and%20license%20details.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Pre-order — S$149 (50% off)</a></div>
           </div>
 
           <div class="pricing-card">
-            <h3 style="margin-bottom:12px;">All-in Bundle</h3>
-            <div class="price-original">Regular Price: S$799</div>
-            <div class="price">S$649</div>
-            <div class="price-note">Early Access Bundle (limited time)</div>
-            <p>Full KopiBot Kit + white-glove setup. We install, configure, and customise KopiBot Kit for your store. No developer needed — you get a fully working setup and launch support. <br /><br /><strong>The white-glove setup is a one-time service; lifetime updates apply to the items included in the Standard plan only</strong></p>
+            <h3 style="margin-bottom:12px;">Pro</h3>
+            <div class="price-row">
+              <div class="price-original">S$599</div>
+              <div class="price">S$299</div>
+            </div>
+            <div class="price-note">Early Adopter — 50% off (limited time) <br /> One-time purchase — includes lifetime updates</div>
+            <p style="text-align: left;">Includes everything in the Starter plan, plus the right to use KopiBot Kit in <b>unlimited commercial projects.</b></p>
+            <ul class="included-list" style="text-align: left;">
+              <li>Everything in the Starter plan</li>
+              <li>License for unlimited commercial projects</li>
+              <li>Lifetime updates to the product license</li>
+              <li>Private community access</li>
+            </ul>
+            <div style="margin-top:auto; margin-top:18px;"><a href="mailto:nick.chen@kopibotkit.com?subject=Purchase%20Pro%20License%20-%20KopiBot%20Kit%20(50%25%20off)&body=Hi%20Nick%2C%0A%0AI%27d%20like%20to%20purchase%20the%20Pro%20License%20with%20the%2050%25%20early%20access%20discount%20(S%24299).%20Please%20send%20me%20the%20download%20and%20license%20details.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Pre-order — S$299 (50% off)</a></div>
+          </div>
+
+          <div class="pricing-card">
+            <h3 style="margin-bottom:12px;">White-Glove Setup (add-on)</h3>
+            <div class="price">S$500</div>
+            <div class="price-note">One-time service, per project</div>
+            <p style="text-align: left;">Let the founder of KopiBot Kit personally handle the entire setup and deployment for one project. Peace of mind, guaranteed. Can be added to either the Starter or Pro license.</p>
             <ul class="included-list">
-              <li>Everything in the Standard plan</li>
-              <li>We handle deployment for you (Vercel or AWS) as part of the setup</li>
-              <li>Full on-site (remote) setup and configuration</li>
-              <li>Custom knowledge ingestion (we ingest your FAQs, policies)</li>
-              <li>Priority Roadmap Access & Early Beta for New Languages. As a White-Glove partner, you will be the first to get access to our upcoming Malay & Tamil support and we will work with you directly to tune it for your business</li>
-              <li>Testing across store flows & sample conversations</li>
+              <li>Personalized setup and deployment by the founder</li>
+              <li>Custom knowledge ingestion and initial tuning</li>
+              <li>Test across store flows & sample conversations</li>
               <li>1 week post-launch support</li>
             </ul>
-            <div style="margin-top:auto; margin-top:18px;"><a href="mailto:nick.chen@kopibotkit.com?subject=White-glove%20bundle%20request%20-%20KopiBot%20Kit&body=Hi%20Nick%2C%0A%0AI%27m%20interested%20in%20the%20white-glove%20bundle%20(S%24649%20early).%20Please%20contact%20me%20to%20arrange%20setup.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Request White-Glove Bundle</a></div>
+            <div style="margin-top:auto; margin-top:18px;"><a href="mailto:nick.chen@kopibotkit.com?subject=White-Glove%20Setup%20-%20KopiBot%20Kit&body=Hi%20Nick%2C%0A%0AI%27d%20like%20to%20add%20the%20White-Glove%20Setup%20(S%24500)%20to%20my%20order.%20Please%20contact%20me%20to%20arrange%20setup.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Pre-order — S$500</a></div>
           </div>
         </div>
     </section>    
@@ -1000,7 +1048,7 @@
         </p>
 
         <p style="margin-top:8px;">
-          <a href="mailto:nick.chen@kopibotkit.com?subject=Early%20access%20request%20-%20KopiBot%20Kit&body=Hi%20Nick%2C%0A%0AI%27d%20like%20early%20access%20to%20KopiBot%20Kit.%20Please%20add%20me%20to%20the%20early%20access%20list.%0A%0ARegards%2C%0A%5BYour%20name%5D" class="cta-button">Get Early Access & Lock In 50% Off</a>
+          <a href="#pricing" class="cta-button hero-cta">Be an Early Adopter & Lock In 50% Off</a>
         </p>
 
         <p class="social-proof">
@@ -1034,18 +1082,26 @@
         "offers": [
           {
             "@type": "Offer",
-            "name": "Standard - Early Access",
+            "name": "Starter License",
             "price": "149",
             "priceCurrency": "SGD",
-            "availability": "https://schema.org/PreOrder",
+            "availability": "https://schema.org/InStock",
             "validFrom": "2025-09-28"
           },
           {
             "@type": "Offer",
-            "name": "White-Glove Bundle - Early Access",
-            "price": "649",
+            "name": "Pro License",
+            "price": "599",
             "priceCurrency": "SGD",
-            "availability": "https://schema.org/PreOrder",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-09-28"
+          },
+          {
+            "@type": "Offer",
+            "name": "White-Glove Setup (one-time)",
+            "price": "500",
+            "priceCurrency": "SGD",
+            "availability": "https://schema.org/InStock",
             "validFrom": "2025-09-28"
           }
         ],
@@ -1119,6 +1175,29 @@
             document.body.classList.remove('nav-open');
           }
         });
+      })();
+
+      // CTAs that scroll to pricing: attach handler to any .hero-cta element
+      (function() {
+        const triggers = document.querySelectorAll('.hero-cta');
+        const pricing = document.getElementById('pricing');
+        if (!triggers.length || !pricing) return;
+
+        function onClick(e) {
+          e.preventDefault();
+          // close mobile nav if open
+          document.body.classList.remove('nav-open');
+
+          // Add and remove slide-in class to retrigger animation
+          pricing.classList.remove('slide-in-anim');
+          void pricing.offsetWidth; // force reflow
+          pricing.classList.add('slide-in-anim');
+
+          // Smooth scroll
+          pricing.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        triggers.forEach(t => t.addEventListener('click', onClick));
       })();
     </script>
   </body>
